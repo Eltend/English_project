@@ -9,10 +9,10 @@ struct ContentView: View {
     let answerTexts = [
         "The Big Ben",
         "The Eiffel Tower",
-        "The British Museum",
+        "The London Eye",
         "The Colosseum",
         "The Great Wall of China",
-        "Trafalgar Square"
+        "The Tower of London"
     ]
     
     var body: some View {
@@ -127,7 +127,7 @@ struct ContentView: View {
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 }
             }, label: {
-                Text("Our GitHub repository")
+                Text("Our GitHub repository (https://github.com/Eltend/English_project)")
                     .foregroundColor(.blue)
                     .underline()
             })
