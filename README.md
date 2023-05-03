@@ -6,6 +6,15 @@ struct ContentView: View {
     @State private var wrongAnswer = false
     @State private var selectedAnswers: [Int] = []
     
+    let answerTexts = [
+        "The Big Ben",
+        "The Eiffel Tower",
+        "The British Museum",
+        "The Colosseum",
+        "The Great Wall of China",
+        "Trafalgar Square"
+    ]
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -86,8 +95,8 @@ struct ContentView: View {
             Text("Tick the correct answers:")
             Text("What can you see in London?")
             
-            ForEach(1...6, id: \.self) { index in
-                Button("Test \(selectedAnswers.contains(index) ? "#####" : "_____")") {
+            ForEach(0..<answerTexts.count, id: \.self) { index in
+                Button("\(answerTexts[index]) \(selectedAnswers.contains(index) ? "✓" : "")") {
                     if selectedAnswers.contains(index) {
                         selectedAnswers.removeAll(where: { $0 == index })
                     } else {
@@ -97,7 +106,7 @@ struct ContentView: View {
             }
             
             Button("Submit") {
-                if selectedAnswers == [1, 3, 6] {
+                if selectedAnswers == [0, 2, 5] {
                     level = 5
                     wrongAnswer = false
                 } else {
