@@ -127,10 +127,11 @@ struct ContentView: View {
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 }
             }, label: {
-                Text("Our GitHub repository (https://github.com/Eltend/English_project)")
+                Text("Our GitHub repository")
                     .foregroundColor(.blue)
                     .underline()
             })
+            Text("https://github.com/Eltend/English_project")
         }
     }
 }
