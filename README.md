@@ -111,14 +111,14 @@ struct ContentView: View {
         VStack {
             Text("Congratulations! You've completed the quiz.")
             
-            Text("For more information, visit:")
+            Text("You can visit our github project with the source code of the quiz, visit:")
             
             Button(action: {
-                if let url = URL(string: "https://www.visitlondon.com") {
+                if let url = URL(string: "https://github.com/Eltend/English_project") {
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 }
             }, label: {
-                Text("https://www.visitlondon.com")
+                Text("Our GitHub repository")
                     .foregroundColor(.blue)
                     .underline()
             })
