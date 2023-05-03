@@ -21,6 +21,8 @@ struct ContentView: View {
                 question3
             case 4:
                 question4
+            case 5:
+                endScreen
             default:
                 EmptyView()
             }
@@ -102,6 +104,24 @@ struct ContentView: View {
                     wrongAnswer = true
                 }
             }
+        }
+    }
+    
+    private var endScreen: some View {
+        VStack {
+            Text("Congratulations! You've completed the quiz.")
+            
+            Text("For more information, visit:")
+            
+            Button(action: {
+                if let url = URL(string: "https://www.visitlondon.com") {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            }, label: {
+                Text("https://www.visitlondon.com")
+                    .foregroundColor(.blue)
+                    .underline()
+            })
         }
     }
 }
