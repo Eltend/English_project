@@ -31,6 +31,8 @@ struct ContentView: View {
             case 4:
                 question4
             case 5:
+                question5
+            case 100:
                 endScreen
             default:
                 EmptyView()
@@ -115,7 +117,21 @@ struct ContentView: View {
             }
         }
     }
+
     
+        private var question5: some View {
+        VStack {
+            Text("Is Scotland a part of the UK")
+            Button("No") {
+                wrongAnswer = true
+            }
+            Button("Yes") {
+                level = 6
+                wrongAnswer = false
+        }
+    }
+
+
     private var endScreen: some View {
         VStack {
             Text("Congratulations! You've completed the quiz.")
