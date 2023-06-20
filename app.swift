@@ -126,7 +126,7 @@ struct ContentView: View {
                 wrongAnswer = true
             }
             Button("Yes") {
-                level = 6
+                level = 100
                 wrongAnswer = false
         }
     }
