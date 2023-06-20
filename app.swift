@@ -119,15 +119,15 @@ struct ContentView: View {
     }
 
     
-        private var question5: some View {
-        VStack {
-            Text("Is Scotland a part of the UK")
-            Button("No") {
-                wrongAnswer = true
-            }
-            Button("Yes") {
-                level = 100
-                wrongAnswer = false
+    private var question5: some View {
+    VStack {
+        Text("Is Scotland a part of the UK")
+        Button("No") {
+            wrongAnswer = true
+        }
+        Button("Yes") {
+            level = 100
+            wrongAnswer = false
         }
     }
 
