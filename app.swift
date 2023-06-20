@@ -130,6 +130,7 @@ struct ContentView: View {
             wrongAnswer = false
         }
     }
+    }
 
 
     private var endScreen: some View {
@@ -156,5 +157,4 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
-}
 }
